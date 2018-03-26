@@ -1,4 +1,5 @@
 {
+  "name": "my-package",
   "dependencies": {
     "eslint": "^4.19.1"
   }
