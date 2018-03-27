@@ -19,7 +19,8 @@ input = input.sort((a, b) => b.length - a.length);
 console.log(input);
 
 var compare = pair => {
-  (cb1 = pair.b1), (cb2 = pair.b2);
+  let cb1 = pair.b1,
+    cb2 = pair.b2;
   pair.b1.length > pair.b2.length
     ? (cb1 = pair.b1.slice(0, pair.b2.length))
     : (cb2 = pair.b2.slice(0, pair.b1.length));
@@ -35,16 +36,6 @@ var compare = pair => {
     definitivePair = { ...pair };
     input.splice(input.findIndex(val => val === pair.b1), 1);
     input.splice(input.findIndex(val => val === pair.b2), 1);
-    // console.log(
-    //   "la position de b2(",
-    //   pair.b2,
-    //   ") dans input(",
-    //   input,
-    //   ") est ",
-    //   input.findIndex(val => val === pair.b2),
-    //   "ps:",
-    //   pair.b1
-    // );
 
     console.log(
       `*****
@@ -103,18 +94,18 @@ const testIndex = ind => {
   });
 };
 
-do {
-  console.log("do begin");
-  for (i = 0; i < nbFragment; i++) {
-    console.log("loooop", input[i]);
-    let indexF = testIndex(i);
-    if (indexF > -1) {
-      console.log("got it", definitivePair);
-      break;
-    }
+// do {
+console.log("do begin");
+for (let i = 0; i < nbFragment; i++) {
+  console.log("loooop", input[i]);
+  let indexF = testIndex(i);
+  if (indexF > -1) {
+    console.log("got it", definitivePair);
+    break;
   }
-  console.log("do end", input);
-} while (input.length > 0);
+}
+console.log("do end", input);
+// } while (input.length > 0);
 
 // console.log("first", input[indexF]);
 
