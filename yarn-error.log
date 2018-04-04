@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.9.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js output
+  /usr/local/Cellar/node/9.9.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js output crepes/index.js
 
 PATH: 
   /Users/jbcrestot/.rvm/gems/ruby-2.4.1/bin:/Users/jbcrestot/.rvm/gems/ruby-2.4.1@global/bin:/Users/jbcrestot/.rvm/rubies/ruby-2.4.1/bin:/usr/local/php5/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin::/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/Users/jbcrestot/.fastlane/bin:/Users/jbcrestot/.nvm/versions/node/v8.9.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/tools:/tools/bin:/platform-tools:::/Users/jbcrestot/.rvm/bin
@@ -18,8 +18,7 @@ npm manifest:
     "name": "my-package",
     "license": "MIT",
     "scripts": {
-      "te": "pwd",
-      "output": "empty",
+      "output": "npm run empty && npm run writeBabel",
       "empty": "> babel.js",
       "writeBabel": "babel --out-file babel.js"
     },
@@ -2260,9 +2259,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 127
+  Exit code: 1
   Command: sh
-  Arguments: -c empty
+  Arguments: -c npm run empty && npm run writeBabel crepes/index.js
   Directory: /Users/jbcrestot/Projects/DevBattle11
   Output:
   
